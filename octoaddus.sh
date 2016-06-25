@@ -1,9 +1,9 @@
 #!/bin/bash
-curl https://raw.githubusercontent.com/WebHostingCoopTeam/keys/master/addus.sh | bash
-echo 'This is for Webhosting.coop dev only, this will add our keys to your server, BEWARE!'
+curl https://raw.githubusercontent.com/Thalhalla/keys/master/addus.sh | bash
+echo 'This is for Thalhalla dev only, this will add our keys to your server, BEWARE!'
 touch /home/git/.ssh/authorized_keys
 cp /home/git/.ssh/authorized_keys /tmp/gitsshauthorized_keys
-wget https://raw.githubusercontent.com/WebHostingCoopTeam/keys/master/gitreceive-keys -O /tmp/gitsshauthorized_keys.new
+wget https://raw.githubusercontent.com/Thalhalla/keys/master/gitreceive-keys -O /tmp/gitsshauthorized_keys.new
 cat /tmp/gitsshauthorized_keys.new >> /tmp/gitsshauthorized_keys
 rm /tmp/gitsshauthorized_keys.new
 cat /tmp/gitsshauthorized_keys|sort|uniq>/tmp/gitsshauthorized_keysuniq
