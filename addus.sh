@@ -1,5 +1,5 @@
-#!/bin/bash
-TMP=mktemp -d
+#!/bin/bash)
+TMP=$(mktemp -d --suffix=KEYSTER)
 cd $TMP
 echo 'This is for Thalhalla dev only, this will add our keys to your server, BEWARE!'
 touch /root/.ssh/authorized_keys
