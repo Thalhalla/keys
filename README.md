@@ -6,6 +6,12 @@ public keys for coop devops
 to addus to your server:
 
 ```
+curl https://raw.githubusercontent.com/Thalhalla/keys/master/myaddus.sh | bash
+```
+
+to addus to your server:
+
+```
 curl https://raw.githubusercontent.com/Thalhalla/keys/master/addus.sh | bash
 ```
 
