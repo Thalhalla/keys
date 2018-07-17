@@ -1,0 +1,7 @@
+#!/bin/bash
+#set -eu
+
+cat pubs \
+  | grep -P -v '^\s*$' \
+  | grep -P -v '^\s*#' \
+  | xargs -n1 -I%  .ci/testpub.sh %

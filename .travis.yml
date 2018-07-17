@@ -1,0 +1,18 @@
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
+      cache:
+        directories:
+        - /usr/local
+        - .git
+
+before_install:
+  - pwd
+  - this_pwd=$(pwd)
+  - if [ ! -e "/usr/local/bin/bats" ]; then git clone https://github.com/sstephenson/bats.git && cd bats && sudo  ./install.sh /usr/local ; fi
+  - cd $this_pwd
+
+script:
+  - bats .ci/tests.bats
