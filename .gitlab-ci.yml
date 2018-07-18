@@ -1,2 +1,2 @@
-before_script:
+script:
   - sh .ci/run_ci.sh
